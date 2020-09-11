@@ -29,7 +29,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run format && yarn run lint && yarn run test"
+      "pre-commit": "yarn run format && yarn run lint",
+      "pre-push": "CI=true react-scripts-ts test && yarn run test"
     }
   },
   "eslintConfig": {
